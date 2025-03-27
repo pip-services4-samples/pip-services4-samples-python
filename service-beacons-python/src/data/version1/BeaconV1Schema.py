@@ -1,6 +1,5 @@
-from pip_services4_commons import TypeCode
-from pip_services4_data import ObjectSchema
-
+from pip_services4_commons.convert import TypeCode
+from pip_services4_data.validate import ObjectSchema
 
 class BeaconV1Schema(ObjectSchema):
     def __init__(self):

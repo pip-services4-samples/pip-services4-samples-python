@@ -1,4 +1,4 @@
-from pip_services4_data import IStringIdentifiable
+from pip_services4_data.data import IStringIdentifiable
 from typing import Any
 
 class BeaconV1(IStringIdentifiable):

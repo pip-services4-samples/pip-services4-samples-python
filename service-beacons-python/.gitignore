@@ -13,3 +13,4 @@ _mailinglist
 .cache/
 .idea/
 .pytest_cache/
+/data/*.test.json
