@@ -1,0 +1,12 @@
+pytest
+pytz
+ 
+pip_services4_commons
+pip_services4_expressions
+pip_services4_components
+pip_services4_container
+pip_services4_data
+pip_services4_mongodb
+pip_services4_rpc
+pip_services4_http
+pip_services4_swagger
