@@ -1,4 +1,4 @@
-from service_beacons_python.persistence.BeaconsFilePersistence import BeaconsFilePersistence
+from service_beacons.persistence.BeaconsFilePersistence import BeaconsFilePersistence
 from .BeaconsPersistenceFixture import BeaconsPersistenceFixture
 
 class TestBeaconFilePersistence():

@@ -1,10 +1,10 @@
 from pip_services4_components.config import ConfigParams
 from pip_services4_components.refer import References, Descriptor
 
-from service_beacons_python.clients.version1.BeaconsHttpClientV1 import BeaconsHttpClientV1
-from service_beacons_python.services.BeaconsService import BeaconsService
-from service_beacons_python.persistence.BeaconsMemoryPersistence import BeaconsMemoryPersistence
-from service_beacons_python.controllers.version1.BeaconsHttpControllerV1 import BeaconsHttpControllerV1
+from service_beacons.clients.version1.BeaconsHttpClientV1 import BeaconsHttpClientV1
+from service_beacons.services.BeaconsService import BeaconsService
+from service_beacons.persistence.BeaconsMemoryPersistence import BeaconsMemoryPersistence
+from service_beacons.controllers.version1.BeaconsHttpControllerV1 import BeaconsHttpControllerV1
 from .BeaconsClientV1Fixture import BeaconsClientV1Fixture
 
 http_config = ConfigParams.from_tuples(

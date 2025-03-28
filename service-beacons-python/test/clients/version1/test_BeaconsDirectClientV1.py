@@ -1,9 +1,9 @@
 from pip_services4_components.config import ConfigParams
 from pip_services4_components.refer import References, Descriptor
 
-from service_beacons_python.clients.version1.BeaconsDirectClientV1 import BeaconsDirectClientV1
-from service_beacons_python.services.BeaconsService import BeaconsService
-from service_beacons_python.persistence.BeaconsMemoryPersistence import BeaconsMemoryPersistence
+from service_beacons.clients.version1.BeaconsDirectClientV1 import BeaconsDirectClientV1
+from service_beacons.services.BeaconsService import BeaconsService
+from service_beacons.persistence.BeaconsMemoryPersistence import BeaconsMemoryPersistence
 from .BeaconsClientV1Fixture import BeaconsClientV1Fixture
 
 class TestBeaconsDirectClientV1():
