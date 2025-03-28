@@ -1,4 +1,4 @@
-from src.clients.version1.BeaconsMockClientV1 import BeaconsMockClientV1
+from service_beacons_python.clients.version1.BeaconsMockClientV1 import BeaconsMockClientV1
 
 from .BeaconsClientV1Fixture import BeaconsClientV1Fixture
 

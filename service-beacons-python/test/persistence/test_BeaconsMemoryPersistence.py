@@ -1,4 +1,4 @@
-from src.persistence.BeaconsMemoryPersistence import BeaconsMemoryPersistence
+from service_beacons_python.persistence.BeaconsMemoryPersistence import BeaconsMemoryPersistence
 from .BeaconsPersistenceFixture import BeaconsPersistenceFixture
 
 class TestBeaconMemoryPersistence():

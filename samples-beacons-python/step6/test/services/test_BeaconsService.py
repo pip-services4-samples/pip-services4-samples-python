@@ -1,9 +1,9 @@
 from pip_services4_data.query import FilterParams, PagingParams
 from pip_services4_components.refer import References, Descriptor
 
-from src.data.version1 import BeaconV1, BeaconTypeV1
-from src.services.BeaconsService import BeaconsService
-from src.persistence.BeaconsMemoryPersistence import BeaconsMemoryPersistence
+from service_beacons_python.data.version1 import BeaconV1, BeaconTypeV1
+from service_beacons_python.services.BeaconsService import BeaconsService
+from service_beacons_python.persistence.BeaconsMemoryPersistence import BeaconsMemoryPersistence
 
 BEACON1 = BeaconV1("1", "1", BeaconTypeV1.AltBeacon, "00001", "TestBeacon1", {"type": 'Point', "coordinates": [0, 0]}, 50)
 BEACON2 = BeaconV1("2", "1", BeaconTypeV1.iBeacon, "00002", "TestBeacon2", {"type": 'Point', "coordinates": [2, 2]}, 70)
