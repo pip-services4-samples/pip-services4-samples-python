@@ -10,10 +10,10 @@ from pip_services4_commons.reflect import PropertyReflector
 from pip_services4_components.exec import Parameters
 from pip_services4_http.test.TestCommandableHttpClient import TestCommandableHttpClient
 
-from src.data.version1 import BeaconV1, BeaconTypeV1
-from src.services.BeaconsService import BeaconsService
-from src.persistence.BeaconsMemoryPersistence import BeaconsMemoryPersistence
-from src.controllers.version1.BeaconsHttpControllerV1 import BeaconsHttpControllerV1
+from service_beacons_python.data.version1 import BeaconV1, BeaconTypeV1
+from service_beacons_python.services.BeaconsService import BeaconsService
+from service_beacons_python.persistence.BeaconsMemoryPersistence import BeaconsMemoryPersistence
+from service_beacons_python.controllers.version1.BeaconsHttpControllerV1 import BeaconsHttpControllerV1
 
 BEACON1 = BeaconV1("1", "1", BeaconTypeV1.AltBeacon, "00001", "TestBeacon1", {"type": 'Point', "coordinates": [0, 0]}, 50.0)
 BEACON2 = BeaconV1("2", "1", BeaconTypeV1.iBeacon, "00002", "TestBeacon2", {"type": 'Point', "coordinates": [2, 2]}, 70.0)
