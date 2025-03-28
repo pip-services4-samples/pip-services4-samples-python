@@ -1,4 +1,4 @@
-from pip_services3_commons.data import FilterParams, PagingParams
+from pip_services4_data.query import FilterParams, PagingParams
 from src.data.version1 import BeaconV1, BeaconTypeV1
 
 BEACON1 = BeaconV1("1", "1", BeaconTypeV1.AltBeacon, "00001", "TestBeacon1", {"type": 'Point', "coordinates": [0, 0]}, 50.0)
