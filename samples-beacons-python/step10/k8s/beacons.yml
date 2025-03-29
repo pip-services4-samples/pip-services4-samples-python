@@ -1,0 +1,47 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+ name: beacons
+ labels:
+   app: beacons
+spec:
+ type: NodePort
+ ports:
+ - port: 8080
+   nodePort: 32718
+   protocol: TCP
+ selector:
+   app: beacons
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+ name: beacons-deploy
+spec:
+ replicas: 2
+ minReadySeconds: 5
+  strategy:
+   type: RollingUpdate
+   rollingUpdate:
+     maxUnavailable: 1
+     maxSurge: 1
+  template:
+   metadata:
+     labels:
+       app: beacons
+   spec:
+     containers:
+     - name: beacons-pod
+       image: myregistry:5000/service-beacons-python:latest
+       imagePullPolicy: Never
+       ports:
+       - containerPort: 8080
+       env:
+       - name: ENVIRONMENT
+         valueFrom:
+           configMapKeyRef:
+             name: config
+              key: environment
+       - name: MONGO_ENABLED
+         value: ”true”
