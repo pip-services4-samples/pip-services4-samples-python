@@ -2,6 +2,7 @@ from typing import List, Any, Optional
 
 from pip_services4_components.config import IConfigurable, ConfigParams
 from pip_services4_data.query import FilterParams, PagingParams, DataPage
+from pip_services4_data.keys import IdGenerator
 from pip_services4_components.refer import IReferenceable, Descriptor, IReferences
 from pip_services4_components.context import IContext
 
@@ -54,9 +55,12 @@ class BeaconsService(IBeaconsService, IConfigurable, IReferenceable):
         return position
 
     def create_beacon(self, context: Optional[IContext], entity: BeaconV1) -> BeaconV1:
+        entity.id = entity.id if entity.id != None else IdGenerator.next_long()
+        entity.type = entity.type if entity.type != None else BeaconTypeV1.Unknown
         return self.__persistence.create(context, entity)
 
     def update_beacon(self, context: Optional[IContext], entity: BeaconV1) -> BeaconV1:
+        entity.type = entity.type if entity.type != None else BeaconTypeV1.Unknown
         return self.__persistence.update(context, entity)
 
     def delete_beacon_by_id(self, context: Optional[IContext], id: str) -> BeaconV1:
