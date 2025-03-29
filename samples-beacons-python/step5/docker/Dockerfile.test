@@ -1,0 +1,19 @@
+FROM python:3.9-slim-buster
+
+# set working directory
+WORKDIR /usr/src/app
+
+# install git for adding dependecies from git
+RUN apt-get update && apt-get -y install git
+
+# copy project file
+COPY requirements.txt .
+
+# install dependencies
+RUN pip install -r requirements.txt
+
+# copy all project
+COPY . .
+
+# run test
+CMD python -m pytest

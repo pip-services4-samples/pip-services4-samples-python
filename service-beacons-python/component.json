@@ -1,0 +1,19 @@
+{
+    "name":  "service-beacons-python",
+    "type": "service",
+    "language": "node",
+    "version": "1.0.0",
+    "build": 0,
+    "registry": "myregistry:5000",
+    "artifacts": [
+        {
+            "name":  "service_beacons",
+            "type": "pip"
+        },
+        {
+            "name":  "<name>:<version>",
+            "type": "docker"
+        }
+    ]
+}
+
