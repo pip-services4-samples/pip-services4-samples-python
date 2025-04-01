@@ -1,7 +1,7 @@
 {
     "name":  "service-beacons-python",
     "type": "service",
-    "language": "node",
+    "language": "python",
     "version": "1.0.0",
     "build": 0,
     "registry": "myregistry:5000",
