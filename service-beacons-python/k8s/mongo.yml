@@ -14,13 +14,16 @@ spec:
  selector:
    app: mongo
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
  name: mongo-deploy
 spec:
- replicas: 2
+ replicas: 1
  minReadySeconds: 5
+ selector:
+  matchLabels:
+   app: mongo
  strategy:
    type: RollingUpdate
    rollingUpdate:

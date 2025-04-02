@@ -14,19 +14,22 @@ spec:
  selector:
    app: beacons
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
  name: beacons-deploy
 spec:
  replicas: 2
  minReadySeconds: 5
-  strategy:
-   type: RollingUpdate
-   rollingUpdate:
+ selector:
+  matchLabels:
+   app: beacons
+ strategy:
+  type: RollingUpdate
+  rollingUpdate:
      maxUnavailable: 1
      maxSurge: 1
-  template:
+ template:
    metadata:
      labels:
        app: beacons
@@ -42,6 +45,10 @@ spec:
          valueFrom:
            configMapKeyRef:
              name: config
-              key: environment
+             key: environment
        - name: MONGO_ENABLED
          value: ”true”
+       - name: MONGO_SERVICE_HOST
+         value: "mongo"
+       - name: MONGO_SERVICE_PORT
+         value: "32717"
